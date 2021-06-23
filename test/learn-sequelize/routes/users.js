@@ -17,9 +17,9 @@ router.route('/')
   .post(async (req, res, next) => {
     try {
       const user = await User.create({
-        name: req.body.name,
-        age: req.body.age,
-        married: req.body.married,
+        title: req.body.title,
+        writer: req.body.writer,
+        text: req.body.text,
       });
       console.log(user);
       res.status(201).json(user);

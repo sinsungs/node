@@ -1,0 +1,380 @@
+
+
+
+
+*{
+    font-family: 'Noto Sans KR', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+    margin:0px;
+    padding: 0px;
+    color: black;
+  }
+  
+  h1 {
+    font-size: 48px;
+    font-weight: 100;
+  }
+  
+  h2 {
+    font-size: 36px;
+  }
+
+  .intro_bg{
+    /* background-image: url("image/intro.png"); */
+    
+    width: 100%;
+    height: 80px;
+    top: 0;
+  }
+  
+  .header{
+    width:100%;
+    margin:auto;
+    display:flex;
+    height: 70px;
+    background-color: rgb(28, 37, 66);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  .computer_icon{
+    margin: 13px 20px;
+    float: left;
+  }
+  .nav{
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+    width:calc(1280px - 300px);
+    line-height: 69px;
+  }
+
+  @media screen and (max-width: 1080px) {
+    .computer_icon {
+      display: none;
+    }
+  
+    .nav {
+      margin-right: 200px;
+    }
+  }
+  
+  @media screen and (max-width: 790px) {
+    .nav {
+      margin-right: 80px;
+      /* font-size: 10px; */
+    }  
+  } 
+  
+
+  .nav > li {
+    margin-left:84px;
+  }
+  
+  .nav > li > a {
+    color: #fff;
+  }
+  
+  
+  .outer-menu {
+    background-color: rgb(28, 37, 66);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .outer-menu-item {
+    margin: 0 auto;
+    position: relative;
+    color : white;
+    display: inline-block;
+  }
+  
+  .menu-title {
+    display: inline-block;
+    height: 30px; line-height: 30px;
+    padding: 5px 50px;
+  }
+
+  .menu-title > a {
+    color: white;
+  }
+  
+  .menu-title:hover {
+    text-decoration: underline;
+  }
+  
+  .inner-menu {
+    display: none;
+    position: absolute;
+    top: 69px; left: 0;
+    width: 100%;
+    background: Aliceblue;
+    box-shadow: 3px 3px #adada4;
+    z-index: 1000;
+    text-align: center
+  }
+  
+  .inner-menu-item > a {
+    font-size: 13px;
+    display: block;
+    padding: -30px;
+    color: #666;
+  }
+  
+  .inner-menu-item > a:hover {
+    text-decoration: none;
+    font-size: 14px;
+    transform: 0.3s;
+  }
+
+  #logout > a {
+    /* margin-left: 50px;
+    padding: 18px 50px; */
+    padding: 8px 0;
+    margin-right: -350px;
+    float: right;
+    font-size: 13px;
+  }
+  
+  /* side_bar */
+  .side_bar_3 {
+    float: left;
+    background-color: rgb(28, 37, 66);
+    display: block;
+    width: 200px;
+    height: 400px;
+    overflow: inherit;
+    border-radius:0.5em;
+    -moz-border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+  }
+  
+  #item_20 {
+    margin: 20px;
+    color: #fff;
+  }
+  
+  .side_menu_item {
+    text-align: center;
+  }
+  
+  .item_title {
+    color: #fff;
+    margin: 10px;
+    margin-bottom: 40px;
+  }
+  
+  .side_inner_menu {
+    color: #fff;
+  }
+  
+  #side_inner_menu_item {
+    margin: 20px;
+  }
+
+  .side_inner_menu > li:hover {
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 670px) {
+    .nav {
+      margin: 0 200px;
+    }
+    .inner-menu{
+      margin-left: -270px;
+      display: inline;
+      width: 670px;
+    }
+    
+    #display_off {
+      display: none;
+    }
+    
+    .side_bar {
+      display: none;
+    }
+  
+    .introduce {
+      width: 100%;
+    }
+  
+  }
+
+  .computer_icon > a > h3 {
+    font-size: 28px;
+    color: white;
+  }
+
+/* QNA */
+
+
+.row {
+  background-color:rgb(189, 189, 189);
+  border-radius: 20px;
+}
+
+#faqs {
+    width: 100%;
+    height: 100%;
+}
+
+#faqs h1 {
+    overflow: hidden;
+    font-weight: 900;
+    font-size: 34;
+    text-align:center;
+    padding: 20px 0 50px 0;
+}
+
+.accordion {
+  padding: 0 0 50px 0;
+}
+
+.card {
+  color:#fff;
+}
+
+.accordion .card {
+    overflow: hidden;
+    border-radius:0;
+    background: none;
+    border-left-width:0;
+    border-right-width: 0;
+}
+
+.accordion .card .card-header {
+    background: none;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius:0;
+}
+.accordion .card-header h2{
+    font-size: 1rem;
+}
+.accordion .card-header .btn {
+    color: #fff;
+    width: 100%;
+    text-align:left;
+    padding-left: 0;
+    padding-right: 0;
+}
+.accordion .card-header i {
+    font-size: 1.3rem;
+    position: absolute;
+    top: 15px;
+    right: 1rem;
+}
+.accordion .card-body {
+    float: left;
+    color: aliceblue;
+}
+
+#faqs {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+
+
+/* 수정 */
+#modify {
+  float: left;
+  background-color: rgb(189, 189, 189);
+  width: calc(100% - 200px);
+  height: 700px;
+  overflow: hidden;
+  border-radius:0.5em;
+  -moz-border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+  display: none;
+}
+
+/* #modify > div {
+  display: none;
+} */
+
+#modify > div > p {
+  margin-top: 20px;
+  margin-left: 40px;
+}
+
+#modify > div > a {
+  margin: 40px 0 0 300px;
+} 
+
+button {
+  width: 90px;
+  height: 30px;
+  background-color: #004fff;
+  border-radius: 20px;
+  color: white;
+  box-shadow: 0 4px 16px rgba(0, 79, 255, 0.3);
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
+  border: none;
+  transition: 0.3s;
+}
+
+button:focus {
+  outline: 0;
+}
+
+button:hover {
+  background-color: rgba(0, 79, 255, 0.9);
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 79, 255, 0.6);
+}
+
+textarea {
+  font-size: 18px;
+  margin: 40px;
+}
+
+@media screen and (max-width: 670px) {
+  .nav {
+    margin: 0 200px;
+  }
+  .inner-menu{
+    margin-left: -270px;
+    display: inline;
+    width: 670px;
+  }
+  
+  #display_off {
+    display: none;
+  }
+  
+  .side_bar {
+    display: none;
+  }
+
+  .introduce {
+    width: 100%;
+  }
+
+}
+
+
+/* footer */
+.footer{
+  width: 100%;
+  float: left;
+  display: flex;
+  background: #1f1f1f;
+  padding:30px;
+}
+.footer > div:first-child {
+  flex:3;
+  text-align: center;
+  color: #fff;
+}
+.footer > div:last-child {
+  flex:9;
+  color: #fff;
+}

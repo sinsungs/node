@@ -23,13 +23,13 @@ async function getUser() {
       td.textContent = user.id;
       row.appendChild(td);
       td = document.createElement('td');
-      td.textContent = user.name;
+      td.textContent = user.title;
       row.appendChild(td);
       td = document.createElement('td');
-      td.textContent = user.age;
+      td.textContent = user.writer;
       row.appendChild(td);
       td = document.createElement('td');
-      td.textContent = user.married ? '기혼' : '미혼';
+      td.textContent = user.text;
       row.appendChild(td);
       tbody.appendChild(row);
     });
@@ -96,24 +96,24 @@ async function getComment(id) {
 // 사용자 등록 시
 document.getElementById('user-form').addEventListener('submit', async (e) => {
   e.preventDefault();
-  const name = e.target.username.value;
-  const age = e.target.age.value;
-  const married = e.target.married.checked;
-  if (!name) {
+  const title = e.target.title.value;
+  const writer = e.target.writer.value;
+  const text = e.target.text.value;
+  if (!title) {
     return alert('이름을 입력하세요');
   }
-  if (!age) {
-    return alert('나이를 입력하세요');
+  if (!writer) {
+    return alert('작성자를 입력하세요');
   }
   try {
-    await axios.post('/users', { name, age, married });
+    await axios.post('/users', { title, writer, text });
     getUser();
   } catch (err) {
     console.error(err);
   }
-  e.target.username.value = '';
-  e.target.age.value = '';
-  e.target.married.checked = false;
+  e.target.title.value = '';
+  e.target.writer.value = '';
+  e.target.text.value = '';
 });
 // 댓글 등록 시
 document.getElementById('comment-form').addEventListener('submit', async (e) => {
